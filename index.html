@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOHANA AKSHAYA - Portfolio</title>
+  <style>
+html {
+  scroll-behavior: smooth;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.project:hover {
+  background-color: #fff7f0;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+h1, h2 {
+  transition: color 0.3s ease;
+}
+
+h1:hover, h2:hover {
+  color: #ff6a00;
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffd700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #fdf6fd;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+nav {
+  background: linear-gradient(to right, #43cea2, #185a9d);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transform: scale(1.05);
+}
+
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  color: #ee0979;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+.project {
+  background-color: #fff;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 5px solid #ff6a00;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(to right, #185a9d, #43cea2);
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Now loads from same folder as index.html -->
+    <img src="profile-new.jpg" alt="Mohana Akshaya V S" class="profile-pic" />
+    <h1>MOHANA AKSHAYA V S</h1>
+    <p>Computer Science Engineer @ ESEC (2023-2027). Passion for Python, Web dev, AI</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#internship">Internship</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>B.E in Computer Science and Engineering at Erode Sengunthar Engineering College (2023 - 2027)</p>
+  </section>
+
+  <section id="internship" class="fade-in">
+    <h2>Internship</h2>
+    <p>Marcello Tech — Internship
+       Completed a hands-on internship focused on AWS Cloud technologies, 
+       gaining practical experience in cloud computing, infrastructure management, deploying services on AWS. The program emphasized real-time project training and foundational cloud concepts.
+    </p>
+  </section>
+
+  <section id="skills" class="fade-in">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>Java</li>
+      <li>Excel</li>
+      <li>Deployment - Netlify</li>
+      <li>Excel</li>
+      <li>Git and GitHub</li>
+      <li>Canva</li>
+      <li>AI Skills</li>
+      <li>Gen AI</li>
+      <li>SQL</li>
+    </ul>
+  </section>
+
+  <section id="certifications" class="fade-in">
+    <h2>Certifications</h2>
+    <ul>
+      <li>BUILDING OWN GENERATIVE AI MODEL BY NXTWAVE.</li>
+      <li>PROMPT ENGINEERING FOR CHATGPT BY GREAT LEARNING.</li>
+      <li>TIPS FOR WRITING BUSINESS EMAILS BY LINKEDIN.</li>
+      <li>CHATGPT SEARCH : CONVERSATIONAL, REAL-TIME SEARCH BY LINKEDIN.</li>
+      <li>MANAGING YOUR PROFESSIONAL NETWORK BY LINKEDIN.</li>
+      <li>ARTIFICIAL INTELLIGENCE A-Z : AGENTIC AI, GEN AI, AND RL BY UDEMY.</li>
+      <li>EXCEL ESSENTIAL TRAINING TRAINING (MICROSOFT 365) BY LINKEDIN.</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Personal Portfolio</h3>
+      <p>A sleek and responsive portfolio to showcase my work.</p>
+    </div>
+    <div class="project">
+      <h3>Created a Website - Flames Game</h3>
+      <p>A playful tool that helps user discover their "relationship destiny" based on names.</p>
+    </div>
+    <div class="project">
+      <h3>Blackjack Game</h3>
+      <p>Created for entertainment.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <p>Email: akshaya172k6@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/MohanaAkshaya" target="_blank">MOHANA AKSHAYA V S</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/mohanaakshaya17" target="_blank">Mohana Akshaya V S</a></p>
+  </section>
+
+<footer>
+  <p>© 2025 Mohana Akshaya. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
