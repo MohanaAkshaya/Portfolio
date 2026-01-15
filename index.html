@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mohana Akshaya V S - Computer Science Engineer @ ESEC (2023–2027). Portfolio showcasing Python Development, Web Designing, Prompt Engineering, Generative AI, UI/UX Designing, and Data Analysis skills." />
+  <meta name="keywords" content="Mohana Akshaya, Computer Science Engineer, Python Developer, Web Designer, Prompt Engineer, UI/UX Designer, Data Analyst, Portfolio" />
+  <meta name="author" content="Mohana Akshaya V S" />
+  <meta property="og:title" content="MOHANA AKSHAYA - Portfolio" />
+  <meta property="og:description" content="Computer Science Engineer @ ESEC (2023–2027). Passion for Python Development, Web Designing, Prompt Engineering, Exploring Generative AI, UI/UX Designing, Data Analysis" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mohanaakshaya.netlify.app/" />
+  <title>MOHANA AKSHAYA - Portfolio</title>
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* ========== CSS Variables ========== */
+    :root {
+      /* Colors */
+      --primary-dark: #0f172a;
+      --secondary-dark: #1e293b;
+      --accent-dark: #334155;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #64748b;
+      --accent-teal: #0891b2;
+      --accent-teal-light: #22d3ee;
+      --accent-teal-dark: #0e7490;
+      --accent-amber: #f59e0b;
+      --accent-amber-light: #fbbf24;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --error: #ef4444;
+      
+      /* Typography */
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      
+      /* Spacing */
+      --space-xs: 0.25rem;
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2rem;
+      --space-2xl: 3rem;
+      --space-3xl: 4rem;
+      
+      /* Shadows */
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --shadow-glow: 0 0 20px rgba(8, 145, 178, 0.3);
+      
+      /* Transitions */
+      --transition-fast: 0.15s ease;
+      --transition-normal: 0.3s ease;
+      --transition-slow: 0.5s ease;
+      
+      /* Border radius */
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      --radius-xl: 1rem;
+      --radius-full: 9999px;
+    }
+    
+    /* ========== Reset & Base Styles ========== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+    
+    body {
+      font-family: var(--font-sans);
+      background: linear-gradient(135deg, var(--primary-dark) 0%, #0c1220 100%);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    
+    /* ========== Scrollbar Styling ========== */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: var(--primary-dark);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent-teal);
+      border-radius: var(--radius-full);
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-teal-light);
+    }
+    
+    /* ========== Background Pattern ========== */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 20% 80%, rgba(8, 145, 178, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(8, 145, 178, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    /* ========== Header Styles ========== */
+    header {
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      padding: var(--space-3xl) var(--space-xl);
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid rgba(8, 145, 178, 0.2);
+    }
+    
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent-teal), transparent);
+    }
+    
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: var(--radius-full);
+      object-fit: cover;
+      margin-bottom: var(--space-xl);
+      border: 3px solid var(--accent-teal);
+      box-shadow: var(--shadow-xl), var(--shadow-glow);
+      transition: all var(--transition-normal);
+      position: relative;
+    }
+    
+    .profile-pic:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-xl), 0 0 30px rgba(8, 145, 178, 0.5);
+    }
+    
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 600;
+      margin-bottom: var(--space-lg);
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-teal-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+    }
+    
+    header p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+      font-weight: 400;
+    }
+    
+    /* ========== Navigation Styles ========== */
+    nav {
+      background: rgba(30, 41, 59, 0.95);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(8, 145, 178, 0.2);
+    }
+    
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+      padding: var(--space-md) var(--space-lg);
+      gap: var(--space-xs);
+    }
+    
+    nav ul li {
+      margin: 0;
+    }
+    
+    nav ul li a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: var(--space-sm) var(--space-lg);
+      display: block;
+      transition: all var(--transition-normal);
+      border-radius: var(--radius-md);
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+      position: relative;
+    }
+    
+    nav ul li a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--accent-teal);
+      transition: all var(--transition-normal);
+      transform: translateX(-50%);
+    }
+    
+    nav ul li a:hover {
+      color: var(--accent-teal-light);
+      background: rgba(8, 145, 178, 0.1);
+    }
+    
+    nav ul li a:hover::before {
+      width: 80%;
+    }
+    
+    /* ========== Section Styles ========== */
+    section {
+      padding: var(--space-3xl) var(--space-xl);
+      max-width: 900px;
+      margin: var(--space-2xl) auto;
+      background: rgba(30, 41, 59, 0.4);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(8, 145, 178, 0.2);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-teal), var(--accent-amber), var(--accent-teal));
+      opacity: 0.8;
+    }
+    
+    section h2 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: var(--space-xl);
+      color: var(--text-primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid rgba(8, 145, 178, 0.2);
+      transition: all var(--transition-normal);
+    }
+    
+    section h2:hover {
+      color: var(--accent-teal-light);
+    }
+    
+    section h2::after {
+      content: "\f107";
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      font-size: 1.2rem;
+      color: var(--accent-teal);
+      transition: transform var(--transition-normal);
+    }
+    
+    section h2.active::after {
+      transform: rotate(180deg);
+    }
+    
+    section p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    
+    /* ========== Toggle Content Styles ========== */
+    .toggle-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-slow), opacity var(--transition-normal), margin-top var(--transition-normal);
+      opacity: 0;
+      margin-top: 0;
+    }
+    
+    .toggle-content.active {
+      max-height: 2000px;
+      opacity: 1;
+      margin-top: var(--space-lg);
+    }
+    
+    /* ========== Skills & Lists Styles ========== */
+    .skills-list, .certificates-list, .projects-list {
+      line-height: 2;
+      font-size: 1rem;
+    }
+    
+    .skills-list br, .certificates-list br, .projects-list br {
+      display: block;
+      margin-bottom: var(--space-sm);
+    }
+    
+    /* ========== Project Styles ========== */
+    .project {
+      background: rgba(15, 23, 42, 0.6);
+      padding: var(--space-lg);
+      margin: var(--space-lg) 0;
+      border-left: 4px solid var(--accent-teal);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+      position: relative;
+    }
+    
+    .project:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg), var(--shadow-glow);
+      border-left-color: var(--accent-teal-light);
+    }
+    
+    /* ========== Link Styles ========== */
+    a {
+      color: var(--accent-teal-light);
+      text-decoration: none;
+      transition: all var(--transition-normal);
+      font-weight: 500;
+      position: relative;
+    }
+    
+    a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-amber);
+      transition: width var(--transition-normal);
+    }
+    
+    a:hover {
+      color: var(--accent-amber-light);
+    }
+    
+    a:hover::after {
+      width: 100%;
+    }
+    
+    a[target="_blank"]::before {
+      content: "\f08e";
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      font-size: 0.8em;
+      margin-right: 0.3em;
+      opacity: 0.7;
+    }
+    
+    /* ========== Contact Section Styles ========== */
+    #contact {
+      text-align: center;
+    }
+    
+    #contact p {
+      margin-bottom: var(--space-md);
+      font-size: 1.1rem;
+    }
+    
+    #contact a {
+      font-weight: 600;
+    }
+    
+    /* ========== Footer Styles ========== */
+    footer {
+      text-align: center;
+      padding: var(--space-2xl);
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(10px);
+      color: var(--text-muted);
+      border-top: 1px solid rgba(8, 145, 178, 0.2);
+      margin-top: var(--space-3xl);
+    }
+    
+    footer p {
+      font-size: 0.95rem;
+    }
+    
+    /* ========== Responsive Design ========== */
+    @media (max-width: 768px) {
+      html {
+        font-size: 14px;
+      }
+      
+      header {
+        padding: var(--space-2xl) var(--space-lg);
+      }
+      
+      .profile-pic {
+        width: 140px;
+        height: 140px;
+      }
+      
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      nav ul {
+        padding: var(--space-sm);
+        gap: var(--space-xs);
+      }
+      
+      nav ul li a {
+        padding: var(--space-xs) var(--space-md);
+        font-size: 0.9rem;
+      }
+      
+      section {
+        padding: var(--space-2xl) var(--space-lg);
+        margin: var(--space-xl) var(--space-md);
+      }
+      
+      section h2 {
+        font-size: 1.6rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      html {
+        font-size: 13px;
+      }
+      
+      body {
+        line-height: 1.6;
+      }
+      
+      header {
+        padding: var(--space-xl) var(--space-md);
+      }
+      
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      header p {
+        font-size: 1rem;
+      }
+      
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: var(--space-md);
+      }
+      
+      nav ul li {
+        width: 100%;
+        text-align: center;
+      }
+      
+      nav ul li a {
+        padding: var(--space-sm);
+        margin: var(--space-xs) 0;
+      }
+      
+      section {
+        padding: var(--space-xl) var(--space-md);
+        margin: var(--space-lg) var(--space-sm);
+      }
+      
+      section h2 {
+        font-size: 1.4rem;
+      }
+      
+      .project {
+        padding: var(--space-md);
+      }
+    }
+    
+    /* ========== Accessibility Improvements ========== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      
+      html {
+        scroll-behavior: auto;
+      }
+    }
+    
+    /* ========== Focus Styles ========== */
+    a:focus,
+    button:focus,
+    [tabindex]:focus {
+      outline: 2px solid var(--accent-teal);
+      outline-offset: 2px;
+      border-radius: var(--radius-sm);
+    }
+    
+    /* ========== Print Styles ========== */
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+      
+      header, nav, footer {
+        display: none;
+      }
+      
+      section {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+        background: white;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="Profile-new.jpeg" alt="Mohana Akshaya V S" class="profile-pic" />
+  <h1>MOHANA AKSHAYA V S</h1>
+  <p>Computer Science Engineer @ ESEC (2023–2027). Passion for Python Development, Web Designing, Prompt Engineering, Exploring Generative AI, UI/UX Designing, Data Analysis</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#internship">Internship</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>B.E in Computer Science and Engineering at Erode Sengunthar Engineering College (2023–2027)</p>
+</section>
+
+<section id="internship">
+  <h2 class="toggle-btn">Internship</h2>
+  <div class="toggle-content">
+    <p style="margin-bottom: 1rem;">
+      <strong>Python Intern — EdiGlobe</strong><br>
+      <em>Oct 2025 – Nov 2025</em><br>
+      Completed a hands-on Python internship focused on data analysis and application development.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="toggle-btn">Skills</h2>
+  <div class="toggle-content">
+    <p class="skills-list">
+      Languages: Python, HTML, CSS, SQL<br>
+      Frameworks and Libraries: pandas, Flask, Tkinter, BeautifulSoup, Requests, Matplotlib<br>
+      Databases: MongoDB, NoSQL<br>
+      Version Control: Git, GitHub<br>
+      Deployment and Hosting: Netlify, GitHub Pages<br>
+      Design Tools: Canva, Figma<br>
+      Development Environments: VS Code, PyCharm, Google Colab, Jupyter Notebook<br>
+      AI and Automation: Generative AI, Prompt Engineering, Python scripting, Automation<br>
+      Other Tools: Excel<br>
+      Additional Skills Gained (100 Days of Code): API Integration, Web Scraping, OOP, DS, Data Analysis, Debugging, Building Real-World Projects<br>
+      Extra Skills: Exception Handling, CSV Handling, JSON Handling, CLI Development
+    </p>
+  </div>
+</section>
+
+<section id="certifications">
+  <h2 class="toggle-btn">Certifications</h2>
+  <div class="toggle-content">
+    <p class="certificates-list">
+      Prompt Engineering for ChatGPT – Great Learning: <a href="https://www.mygreatlearning.com/certificate/WXFXUIRB" target="_blank">View Certificate</a><br>
+      ChatGPT Search: Conversational, Real-Time Search – LinkedIn Learning: <a href="https://www.linkedin.com/learning/certificates/dd57deebffabe28b0381728347fecd795505a8a0a9fe0dea994cb9c97c0ccf06?trk=share_certificate" target="_blank">View Certificate</a><br>
+      Artificial Intelligence A–Z: Agentic AI, Gen AI, and RL – Udemy: <a href="https://ude.my/UC-d6bc49ac-a636-4f1b-923f-297a9cd501fc" target="_blank">View Certificate</a><br>
+      Excel Essential Training (Microsoft 365) – LinkedIn Learning: <a href="https://www.linkedin.com/learning/certificates/09d487b61f8c51d64226e55d0e771870be1aac2e90a8d1a54fda137ab164f388?trk=share_certificate" target="_blank">View Certificate</a><br>
+      From SQL to MongoDB Document Model – MongoDB University: <a href="https://www.credly.com/badges/9067db6b-f386-4273-8e00-cc280b956bc3/public_url" target="_blank">View Certificate</a><br>
+      Cyber Security and Privacy – Nptel: <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL25CS116S55600015610349814" target="_blank">View Certificate</a><br>
+      100 Days of Code™: The Complete Python Pro Bootcamp – Udemy: <a href="https://www.udemy.com/certificate/UC-0fd9e33f-9ff9-4989-a3a7-9a55266f8b1a/" target="_blank">View Certificate</a><br>
+      Deloitte Cyber Job Simulation – Forage: <a href="theforage.com/verify/6965d075f500f82c446826ab" target="_blank">Verify Certificate</a>
+    </p>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="toggle-btn">Projects</h2>
+  <div class="toggle-content">
+    <p class="projects-list">
+      Personal Portfolio: <a href="https://github.com/MohanaAkshaya/Portfolio" target="_blank">GitHub</a> | <a href="https://mohanaakshaya.netlify.app/" target="_blank">Live Demo</a><br>
+      Flames Game Website: <a href="https://github.com/MohanaAkshaya/flamesgame" target="_blank">GitHub</a> | <a href="https://flamesgame.netlify.app/" target="_blank">Live Demo</a><br>
+      Blackjack Game Website: <a href="https://github.com/MohanaAkshaya/Blackjack-game" target="_blank">GitHub</a> | <a href="https://blackjackgame.netlify.app/" target="_blank">Live Demo</a><br>
+      Tic Tac Toe Game app: <a href="https://github.com/MohanaAkshaya/Tic-tac-toe-game-app" target="_blank">GitHub</a> | <a href="https://tictacz.tiiny.site/" target="_blank">Live Demo</a><br>
+      Hospital Appointment Booking Website – Major Project: <a href="https://github.com/MohanaAkshaya/Health-Hub-Appointments" target="_blank">GitHub</a> | <a href="https://healthhubappointment.netlify.app/" target="_blank">Live Demo</a><br>
+      IMDB Movie Data Analysis: <a href="https://github.com/MohanaAkshaya/ediglobe-minor-project" target="_blank">GitHub</a><br>
+      Personal Expense Tracker: <a href="https://github.com/MohanaAkshaya/ediglobe-major-project" target="_blank">GitHub</a><br>
+      FOCUSLY – Study Companion App: <a href="https://github.com/MohanaAkshaya/Focusly-Study-Focus-App" target="_blank">GitHub</a> | <a href="https://www.figma.com/proto/vIpnYOxtf8biY6JByDOc8W/Focusly-%E2%80%93-Study-Focus-App--UI-UX-Project-?node-id=0-1&t=ay68tYwYiTQ0BeRD-1" target="_blank">Prototype</a>
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: akshaya172k6@gmail.com</p>
+  <p>GitHub: <a href="https://github.com/MohanaAkshaya" target="_blank">MOHANA AKSHAYA V S</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/mohanaakshaya17" target="_blank">Mohana Akshaya V S</a></p>
+</section>
+
+<footer>
+  <p>© 2026 Mohana Akshaya. All rights reserved.</p>
+</footer>
+
+<script>
+  // Enhanced toggle functionality with smooth animations
+  document.querySelectorAll('.toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const content = btn.nextElementSibling;
+      const isActive = btn.classList.contains('active');
+      
+      // Toggle active class
+      btn.classList.toggle('active');
+      content.classList.toggle('active');
+      
+      // Smooth scroll to section if opening
+      if (!isActive) {
+        setTimeout(() => {
+          btn.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 150);
+      }
+    });
+  });
+  
+  // Smooth scroll for navigation links
+  document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        
+        // Add a subtle highlight effect
+        target.style.transform = 'translateY(-5px)';
+        target.style.boxShadow = 'var(--shadow-xl), var(--shadow-glow)';
+        
+        setTimeout(() => {
+          target.style.transform = '';
+          target.style.boxShadow = '';
+        }, 1000);
+      }
+    });
+  });
+  
+  // Add scroll-based animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+  
+  // Observe all sections
+  document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(section);
+  });
+  
+  // Add typing effect to header text (optional enhancement)
+  function typeWriter(element, text, speed = 50) {
+    let i = 0;
+    element.innerHTML = '';
+    
+    function type() {
+      if (i < text.length) {
+        element.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      }
+    }
+    
+    type();
+  }
+  
+  // Initialize typing effect on page load
+  window.addEventListener('load', () => {
+    const headerText = document.querySelector('header p');
+    const originalText = headerText.textContent;
+    
+    // Only apply typing effect on larger screens for performance
+    if (window.innerWidth > 768) {
+      setTimeout(() => {
+        typeWriter(headerText, originalText, 30);
+      }, 1000);
+    }
+  });
+  
+  // Add keyboard navigation support
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      // Close all open sections
+      document.querySelectorAll('.toggle-btn.active').forEach(btn => {
+        btn.click();
+      });
+    }
+  });
+  
+  // Performance optimization: Lazy load images
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+    
+    document.querySelectorAll('img[data-src]').forEach(img => {
+      imageObserver.observe(img);
+    });
+  }
+</script>
+
+</body>
+</html>
